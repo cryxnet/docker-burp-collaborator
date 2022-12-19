@@ -21,12 +21,6 @@
         "description": "Specifies a username for the Virtual Machine."
       }
     },
-    "adminPublicKey": {
-      "type": "string",
-      "metadata": {
-        "description": "Specifies the SSH rsa public key file as a string. Use \"ssh-keygen -t rsa -b 2048\" to generate your SSH key pairs."
-      }
-    },
     "vmSize": {
       "type": "string",
       "defaultValue": "Standard_B1ls",
@@ -45,7 +39,7 @@
     "networkInterfaceName": "[concat(parameters('projectName'), '-nic')]",
     "networkSecurityGroupName": "[concat(parameters('projectName'), '-nsg')]",
     "networkSecurityGroupName2": "[concat(variables('vNetSubnetName'), '-nsg')]",
-    "customData": "[concat('#include\n', uri(parameters('_artifactsLocation'), concat('Cloud-Init.txt', parameters('_artifactsLocationSasToken'))))]"
+    "customData": "[concat('#include\n', uri(https://raw.githubusercontent.com/cryxnet/docker-burp-collaborator/main/azure/script/Cloud-Init.txt))]"
   },
   "resources": [
     {
@@ -175,17 +169,6 @@
         "osProfile": {
           "computerName": "[variables('vmName')]",
           "adminUsername": "[parameters('adminUsername')]",
-          "linuxConfiguration": {
-            "disablePasswordAuthentication": true,
-            "ssh": {
-              "publicKeys": [
-                {
-                  "path": "[concat('/home/', parameters('adminUsername'), '/.ssh/authorized_keys')]",
-                  "keyData": "[parameters('adminPublicKey')]"
-                }
-              ]
-            }
-          },
           "customData": "[base64(variables('customData'))]"
         },
         "storageProfile": {
