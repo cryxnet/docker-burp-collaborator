@@ -4,6 +4,10 @@ Docker Image for the Burp Collaborator Server and deployment to Azure.
 
 **Warning:** New Project; Testing is still needed
 
+## Deploy on Azure
+
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https://raw.githubusercontent.com/cryxnet/docker-burp-collaborator/main/azure/template/vm.json)
+
 ## Requirements
 
 - Docker
@@ -25,9 +29,3 @@ Docker Image for the Burp Collaborator Server and deployment to Azure.
 
 - After to initialize the enviroment etc. dont use this script (`./init.sh`) to start the BurpSuite Collborator container
 - Use the shell script located in `./burp/run.sh` or just run the command `docker run BurpsuiteCollaborator`.
-
-## Setup Azure Environment
-
-## Deploy on Azure
-
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https://raw.githubusercontent.com/cryxnet/docker-burp-collaborator/main/azure/template/vm.json)
