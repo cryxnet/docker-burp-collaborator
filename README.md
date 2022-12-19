@@ -9,8 +9,9 @@
 ## Setup Burpuite Environment
 
 1. Clone the repository to your server (Ubuntu/Debian)
-2. Put the Burp Suite JAR file in `./burp/pgk/` (Name should be `burp.jar`)
-3. Configure the file `./burp/configuration/burp.config` to your liking
+2. Install the BurpSuite Pro (**JAR** File)
+3. Put the Burp Suite **JAR** file in `./burp/pgk/` (Name should be `burp.jar`)
+4. Configure the file `./burp/configuration/burp.config` to your liking
 
 ## Initialize/Run Docker Container
 
