@@ -30,4 +30,4 @@ Docker Image for the Burp Collaborator Server and deployment to Azure.
 
 ## Deploy on Azure
 
-![Deploy tp Azure](https://portal.azure.com/#create/Microsoft.Template/uri/)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https://raw.githubusercontent.com/cryxnet/docker-burp-collaborator/main/azure/template/vm.json)
