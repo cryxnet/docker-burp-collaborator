@@ -1,5 +1,9 @@
 # Burp Collaborator Docker Container (extra: Azure Deployment)
 
+Docker Image for the Burp Collaborator Server and deployment to Azure.
+
+**Warning:** New Project; Testing is still needed
+
 ## Requirements
 
 - Docker
