@@ -45,7 +45,7 @@
     "networkInterfaceName": "[concat(parameters('projectName'), '-nic')]",
     "networkSecurityGroupName": "[concat(parameters('projectName'), '-nsg')]",
     "networkSecurityGroupName2": "[concat(variables('vNetSubnetName'), '-nsg')]",
-    "customData": "[concat('#include\n', uri(parameters('_artifactsLocation'), concat('Cloud-Init.txt', parameters('_artifactsLocationSasToken'))))]" #todo
+    "customData": "[concat('#include\n', uri(parameters('_artifactsLocation'), concat('Cloud-Init.txt', parameters('_artifactsLocationSasToken'))))]"
   },
   "resources": [
     {
