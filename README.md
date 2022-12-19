@@ -10,7 +10,7 @@ Docker Image for the Burp Collaborator Server and deployment to Azure.
 - Burp Suite Professional
 - Azure Account and Credits
 
-## Setup Burpuite Environment
+## Setup Burpsuite Environment
 
 1. Clone the repository to your server (Ubuntu/Debian)
 2. Install the BurpSuite Pro (**JAR** File)
