@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "[0/4] Starting Initialization..."
 
 echo "[1/4] Check if requirements are satisfied..."
