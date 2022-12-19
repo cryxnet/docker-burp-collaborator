@@ -44,7 +44,8 @@
     "publicIPAddressName": "[concat(parameters('projectName'), '-ip')]",
     "networkInterfaceName": "[concat(parameters('projectName'), '-nic')]",
     "networkSecurityGroupName": "[concat(parameters('projectName'), '-nsg')]",
-    "networkSecurityGroupName2": "[concat(variables('vNetSubnetName'), '-nsg')]"
+    "networkSecurityGroupName2": "[concat(variables('vNetSubnetName'), '-nsg')]",
+    "customData": "[concat('#include\n', uri(parameters('_artifactsLocation'), concat('Cloud-Init.txt', parameters('_artifactsLocationSasToken'))))]" #todo
   },
   "resources": [
     {
@@ -184,7 +185,8 @@
                 }
               ]
             }
-          }
+          },
+          "customData": "[base64(variables('customData'))]"
         },
         "storageProfile": {
           "imageReference": {
