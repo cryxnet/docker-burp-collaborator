@@ -7,25 +7,23 @@ Docker Image for the Burp Collaborator Server and deployment to Azure.
 ## Requirements
 
 - Docker
-- Burp Suite Professional
-- Azure Account and Credits
+- Azure Account and Credits (For Azure Deployment)
 
 ## Setup Burpsuite Environment
 
-1. Clone the repository to your server (Ubuntu/Debian)
-2. Install the BurpSuite Pro (**JAR** File)
-3. Put the Burp Suite **JAR** file in `./burp/pgk/` (Name should be `burp.jar`)
-4. Configure the file `./burp/configuration/burp.config` to your liking
+1. Fork this repository and clone it
+2. Configure the file `./burp/configuration/burp.config` to your liking
+3. Push all changes to your repository
 
-## Initialize/Run Docker Container
+## Deployment
 
-1. Run the `./init.sh` file to initialize and starting the container (First time using it on the server)
+### Virtual Machine / Computer etc.
 
-### Troubleshooting
+1. Install git and docker to your machine
+2. Clone your repository to your machine
+3. Build the Docker image using `docker build -t burpsuitecollabertor
+4. Start Docker with this image using `docker run --name burpsuitecollabertor`
 
-- After to initialize the enviroment etc. dont use this script (`./init.sh`) to start the BurpSuite Collborator container
-- Use the shell script located in `./burp/run.sh` or just run the command `docker run BurpsuiteCollaborator`.
+### Azure Container Instance
 
-## Deploy on Azure
-
-### Setup Environment
+Coming soon...
