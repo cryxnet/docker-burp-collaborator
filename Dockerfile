@@ -28,6 +28,9 @@ RUN wget https://portswigger-cdn.net/burp/releases/download?product=pro&version=
 # Installation Cleanup
 RUN apt-get autoremove && apt-get clean && /bin/rm -rf /var/lib/apt/lists/*
 
+# Prepare Configuration File
+RUN sed -i "s/SERVER_DOMAIN_PLACEHOLDER/$SERVER_DOMAIN" /opt/burp/configuration/burp.config
+
 # Setup and deploy 
 From base as final
 

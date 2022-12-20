@@ -9,12 +9,6 @@ Docker Image for the Burp Collaborator Server and deployment to Azure.
 - Docker
 - Azure Account and Credits (For Azure Deployment)
 
-## Setup Burpsuite Environment
-
-1. Fork this repository and clone it
-2. Configure the file `./burp/configuration/burp.config` to your liking
-3. Push all changes to your repository
-
 ## Deployment
 
 ### Virtual Machine / Computer etc.
