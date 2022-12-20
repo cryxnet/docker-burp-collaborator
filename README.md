@@ -21,7 +21,7 @@ Docker Image for the Burp Collaborator Server and deployment to Azure.
 
 1. Install git and docker to your machine
 2. Clone your repository to your machine
-3. Build the Docker image using `docker build -t burpsuitecollabertor
+3. Build the Docker image using `docker build -t burpsuitecollabertor`
 4. Start Docker with this image using `docker run --name burpsuitecollabertor`
 
 ### Azure Container Instance
